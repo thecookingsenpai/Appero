@@ -1,0 +1,6 @@
+appero/node_modules/*
+appero/package-lock.json
+appero/yarn.lock
+appero/MACOSX*
+
+.DS_Store
