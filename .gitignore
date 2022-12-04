@@ -4,3 +4,5 @@ appero/yarn.lock
 appero/MACOSX*
 
 .DS_Store
+
+appero/.installed

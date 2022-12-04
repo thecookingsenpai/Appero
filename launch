@@ -2,23 +2,35 @@
 mydir=${0:a:h}
 cd $mydir
 echo $mydir
+cd appero
+
 
 # Check for installed file
-if [ -f .installed ]; then
+if [ ! -f .installed ]; then
     # Install Homebrew
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if [ ! -f /opt/homebrew/bin/brew ]; then
+        echo "Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        echo "Homebrew already installed"
+    fi
+     
+    if which node > /dev/null
+    then
+        echo "node is installed, skipping..."
+    else
+        echo "Installing node..."
+        # Install Homebrew packages
+        brew install node
+    fi
 
-    # Install Homebrew packages
-    brew install node
-
-    # Install Yarn packages
-    cd appero
+    # Install npm packages
+    echo "Installing npm packages..."
     npm install
     
     touch .installed
 fi
 
 # Run
-cd appero
 node appero.js
 
