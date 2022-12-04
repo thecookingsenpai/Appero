@@ -4,10 +4,11 @@
 
 ### Installation and usage
 
-    git clone https://github.com/thecookingsenpai/appero && cd appero
-    ./launch
+Download the release and double click on Appero! or:
 
-Or download the release and double click on launch.
+    git clone https://github.com/thecookingsenpai/appero && cd appero
+    ./Appero!
+
 
 At the first launch Appero might have to download and install node.js, brew and the required packages. This will happens only once.
 
