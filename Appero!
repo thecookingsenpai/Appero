@@ -7,6 +7,7 @@ cd appero
 
 # Check for installed file
 if [ ! -f .installed ]; then
+    echo "Installing appero..."
     # Install Homebrew
     if [ ! -f /opt/homebrew/bin/brew ]; then
         echo "Installing Homebrew..."
@@ -30,6 +31,8 @@ if [ ! -f .installed ]; then
     
     touch .installed
 fi
+
+echo "Starting appero..."
 
 # Run
 node appero.js
