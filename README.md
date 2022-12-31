@@ -1,5 +1,8 @@
 # Appero
 
+![icon](https://user-images.githubusercontent.com/67682496/210121840-20aef54e-41e9-4b9a-87ac-a065eac8ded7.png)
+
+
 ## The easiest way to create a native application from any website
 
 ### Installation and usage
